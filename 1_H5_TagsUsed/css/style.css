@@ -1,0 +1,227 @@
+/*public*/
+*{
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #222;
+    font-size: 1.4rem;
+    min-width: 32rem;
+    padding: 0 3rem;
+}
+.content{
+    background: #dedede;
+    padding: 1.6rem;
+    min-width: 32rem;
+}
+
+body,
+ul,
+p{
+    margin: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.coloraaa {
+    color: #aaa;
+}
+
+.text-indent {
+    text-indent: 2em;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.container {
+    margin: 1.6rem 0;
+}
+
+.clearfix:after { 
+    visibility: hidden; 
+    display: block; 
+    font-size: 0; 
+    content: " "; 
+    clear: both; 
+    height: 0; 
+} 
+.clearfix{*zoom:1;}
+
+
+/*content*/
+
+/*nav*/
+
+nav {
+    /*margin: 0 -3rem 3rem;*/
+    background: #333;
+    padding: 1.6rem;
+}
+
+nav ul {
+    float: right;
+    line-height: 3.8rem;
+}
+
+nav ul li {
+    float: left;
+    margin: 0 1.6rem;
+}
+
+nav ul li:nth-of-type(4) {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+
+/**/
+
+article,
+section,
+aside {
+    box-sizing: border-box;
+    background: #fff;
+    padding: 2rem 1.6rem;
+    margin-bottom: 1.6rem;
+    box-shadow: 0.1rem 0.1rem 0.05rem #454545;
+}
+
+
+/*图片*/
+
+figure {
+    border: 0.1rem solid #ddd;
+    padding: 0 1.6rem 1.6rem;
+    display: inline-block;
+    margin: 1.6rem;
+}
+figure img{
+    width: 15rem;
+}
+figcaption {
+    text-align: center;
+    line-height: 3rem;
+}
+
+
+/*表格*/
+
+table {
+    width: 100%;
+    border-top: 0.1rem solid #000;
+}
+
+th,
+td {
+    border: 0.1rem solid #ddd;
+    border-width: 0 0.1rem 0.1rem 0;
+    padding: 0.6rem;
+}
+th{
+	border-color: #333;
+}
+
+th:nth-of-type(1),
+td:nth-of-type(1) {
+    border-left-width: 0.1rem;
+}
+
+th {
+    background: #333;
+    color: #fff;
+}
+
+tfoot {
+    background: #ddd;
+}
+
+
+/*侧栏 注册*/
+aside{
+    min-width: 25.6rem;
+}
+aside header h2 {
+    border-left: 0.3rem solid #ccc;
+    padding-left: 1rem;
+}
+
+form p {
+    margin-bottom: 1.6rem;
+}
+
+form label {
+    width: 30%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-right: 1rem;
+    text-align: right;
+}
+
+.tips {
+    margin-left: 30%;
+    color: #bbb;
+}
+
+label[for="des"] {
+    vertical-align: top;
+}
+
+textarea {
+    width: 60%;
+    height: 7rem;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 0.6rem 0;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    background: #1F7FC6;
+    color: #fff;
+    border: none;
+    box-shadow: 0.2rem 0.2rem 0.2rem #bbb;
+}
+/*footer*/
+
+footer {
+    /*margin: 0 -1.5rem;*/
+    padding: 1.5rem;
+    background: #000;
+    color: #fff;
+}
+
+
+/**/
+@media screen and (min-width: 820px){
+    main{
+        float: left;
+        width: 63%;
+    }
+    aside{
+        width: 35%;
+        
+        float: right;
+    }
+}
