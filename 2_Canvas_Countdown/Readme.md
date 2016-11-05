@@ -48,7 +48,7 @@ RegExp
 
 ###二、应用
 
-|产生10个随机数
+> 产生10个随机数
 ```
 var arr = [],r;
 for(var i=0;i<10;i++){
@@ -56,3 +56,29 @@ for(var i=0;i<10;i++){
 	arr[i] ? (arr[i]+=1) : (arr[i]=r);
 }
 ```
+
+> 长度为5的随机数
+```
+for (var c = ''; c.length < 5;) {
+	c += Math.random().toString(36).substr(2,1)
+}
+```
+
+> 生成指定范围随机数
+```
+Math.floor(Math.random() * (上限 - 下限 + 1) + 下限);
+
+Math.ceil(Math.random() * (上限 - 下限) + 下限);
+
+parseInt(Math.random() * (上限 - 下限 + 1) + 下限);
+
+　　//under：上限；over：下限
+　　function getRandom(under, over) {
+　　　　switch (arguments.length) {
+　　　　　　case 1: return Math.ceil(Math.random() * under);
+　　　　　　case 2: return Math.ceil(Math.random() * (over - under) + under);
+　　　　　　default: return 0;
+　　　　}
+　　}
+```
+
