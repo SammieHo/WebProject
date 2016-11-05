@@ -66,6 +66,23 @@ for (var c = ''; c.length < 5;) {
 }
 ```
 
+> 利用字母ASCII码[65,97]，生成长度为x的随机数
+
+```
+function rand(x) {
+
+	var s = "";
+
+	while (s.length < x && x > 0) {
+		var r = Math.random();
+		s += String.fromCharCode(Math.floor(r * 26) + (r > 0.5 ? 97 : 65));
+	}
+
+	return s;
+}
+rand(x);
+```
+
 > 生成指定范围随机数
 
 ```
@@ -88,3 +105,48 @@ function getRandom(under, over) {
 }
 ```
 
+< 随机背景色
+
+//方1
+'#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+
+//方2
+"#"+("000000"+Math.floor(Math.random()*16777216).toString(16)).substr(-6);
+
+//方3
+function randomColor(){
+  var r=function(){return Math.floor(Math.random()*256)};
+  return "rgb("+r()+","+r()+","+r()+")";
+}
+
+< 洗牌算法
+```
+var i = 0,
+	data = [],
+	r;
+
+for (; i < 10; data[i++] = i);
+
+while (--i) {
+
+	r = Math.round(Math.random() * 9 + 1) - 1;
+	data[i] = data[i] + data[r], data[r] = data[i] - data[r], data[i] = data[i] - data[r];
+}
+console.log(data)
+```
+< 或者利用Array.prototype.sort()函数，这里可以不把里面的数值带进来运算。
+< 首先Math.random()会生成一个[0,1)之间的数值，用0.5这个比较公平的数值减去它，概率得到小于0，等于0,大于0三种状况，而Array.prototype.sort()期待的数值恰好是[-1,0,1]，是不是很省事。
+
+```
+var i = 0,
+	data = [],
+	r;
+
+for (; i < 10; data[i++] = i);
+
+data.sort(function() {
+
+	return .5 - Math.random();
+
+});
+```
