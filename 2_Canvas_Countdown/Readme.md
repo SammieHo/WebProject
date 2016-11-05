@@ -39,7 +39,20 @@ String.substr(start[, length]) //返回字符串中从指定位置开始到指�
 
 String.substring(indexStart[, indexEnd]) //返回字符串两个索引之间（或到字符串末尾）的子串
 
+String.slice(beginSlice[, endSlice]) //浅复制，提取字符串并返回新字符串
+
 RegExp
 
 字母ASCII码:A-65,a-97
+```
+
+###二、应用
+
+|产生10个随机数
+```
+var arr = [],r;
+for(var i=0;i<10;i++){
+	r = (Math.random()/(new Date()-0)).toString(36).replace(/\d/g,'').slice(1);
+	arr[i] ? (arr[i]+=1) : (arr[i]=r);
+}
 ```
