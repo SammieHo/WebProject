@@ -105,8 +105,9 @@ function getRandom(under, over) {
 }
 ```
 
-< 随机背景色
+> 随机背景色
 
+```
 //方1
 '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
 
@@ -118,8 +119,10 @@ function randomColor(){
   var r=function(){return Math.floor(Math.random()*256)};
   return "rgb("+r()+","+r()+","+r()+")";
 }
+```
 
-< 洗牌算法
+> 洗牌算法
+
 ```
 var i = 0,
 	data = [],
@@ -134,8 +137,11 @@ while (--i) {
 }
 console.log(data)
 ```
-< 或者利用Array.prototype.sort()函数，这里可以不把里面的数值带进来运算。
-< 首先Math.random()会生成一个[0,1)之间的数值，用0.5这个比较公平的数值减去它，概率得到小于0，等于0,大于0三种状况，而Array.prototype.sort()期待的数值恰好是[-1,0,1]，是不是很省事。
+
+> 或者利用Array.prototype.sort()函数，这里可以不把里面的数值带进来运算。
+
+> 首先Math.random()会生成一个[0,1)之间的数值，用0.5这个比较公平的数值减去它，概率得到小于0，等于0,大于0三种状况，而Array.prototype.sort()期待的数值恰好是[-1,0,1]，是不是很省事。
+
 
 ```
 var i = 0,
