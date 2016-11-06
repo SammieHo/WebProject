@@ -11,5 +11,5 @@
 
 #### Get 新技能 总结√
 
-1.[Math.random()随机数的一些事一些情](https://github.com/SammieHo/WebProject/issues/2)
-2.[setTimeout()和setInterval()的单细胞感情](https://github.com/SammieHo/WebProject/issues/3)
+1. [Math.random()随机数的一些事一些情](https://github.com/SammieHo/WebProject/issues/2)
+2. [setTimeout()和setInterval()的单细胞感情](https://github.com/SammieHo/WebProject/issues/3)
