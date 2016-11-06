@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3实现的页面平滑股过渡</title>
+	<meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- <link rel="stylesheet" type="text/css" href="css/normalize.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="st-container">
+			<!-- nav begin -->
+			<input type="radio" name="radio-set" id="st-control-1" checked="checked">
+			<a href="#st-panel-1">float</a>
+			<input type="radio" name="radio-set" id="st-control-2">
+			<a href="#st-panel-2">JSONP</a>
+			<input type="radio" name="radio-set" id="st-control-3">
+			<a href="#st-panel-3">Ho</a>
+			<input type="radio" name="radio-set" id="st-control-4">
+			<a href="#st-panel-4">WJKong</a>
+			<input type="radio" name="radio-set" id="st-control-5">
+			<a href="#st-panel-5">Sammieho1995</a>
+			<!-- nav end -->
+			<div class="st-scroll">
+				<!-- section 存放每一页内容 -->
+				<section class="st-panel" id="st-panel-1">
+					<!-- 图标 -->
+					<div class="st-desc" data-icon="A"></div>
+					<h2>CSS中的浮动和清除浮动</h2>
+					<p>clear属性不允许被清除浮动的元素的左边/右边挨着浮动元素，底层原理是在被清除浮动的元素上边或者下边添加足够的清除空间。这句话，请默念5次！
+					   要注意了，我们是通过在别的元素上清除浮动来实现撑开高度的， 而不是在浮动元素上。</p>
+				</section>
+
+				<section class="st-panel st-color" id="st-panel-2">
+					<div class="st-desc" data-icon="B">B</div>
+					<h2>JSONP</h2>
+					<p>原理是：动态插入script标签，通过script标签引入一个js文件，这个js文件载入成功后会执行我们在url参数中指定的函数，并且会把我们需要的json数据作为参数传入。由于同源策略的限制，XmlHttpRequest只允许请求当前源（域名、协议、端口）的资源，为了实现跨域请求，可以通过script标签实现跨域请求，然后在服务端输出JSON数据并执行回调函数，从而解决了跨域的数据请求。优点是兼容性好，简单易用，支持浏览器与服务器双向通信。缺点是只支持GET请求。</p>
+				</section>
+
+				<section class="st-panel" id="st-panel-3">
+					<div class="st-desc" data-icon="C">C</div>
+					<h2>webpack</h2>
+					<p>WebPack 是一个模块打包工具，你可以使用WebPack管理你的模块依赖，并编绎输出模块们所需的静态文件。它能够很好地管理、打包Web开发中所用到的HTML、Javascript、CSS以及各种静态文件（图片、字体等），让开发过程更加高效。对于不同类型的资源，webpack有对应的模块加载器。webpack模块打包器会分析模块间的依赖关系，最后 生成了优化且合并后的静态资源。</p>
+				</section>
+
+				<section class="st-panel st-color" id="st-panel-4">
+					<div class="st-desc" data-icon="D">D</div>
+					<h2>TCP</h2>
+					<p>为了准确无误地把数据送达目标处，TCP协议采用了三次握手策略。用TCP协议把数据包送出去后，TCP不会对传送 后的情况置之不理，它一定会向对方确认是否成功送达。握手过程中使用了TCP的标志：SYN和ACK。
+					发送端首先发送一个带SYN标志的数据包给对方。接收端收到后，回传一个带有SYN/ACK标志的数据包以示传达确认信息。 最后，发送端再回传一个带ACK标志的数据包，代表“握手”结束。 若在握手过程中某个阶段莫名中断，TCP协议会再次以相同的顺序发送相同的数据包。</p>
+				</section>
+
+				<section class="st-panel" id="st-panel-5">
+					<div class="st-desc" data-icon="E">E</div>
+					<h2>WebSocket</h2>
+					<p>WebSocket是Web应用程序的传输协议，它提供了双向的，按序到达的数据流。他是一个HTML5协议，WebSocket的连接是持久的，他通过在客户端和服务器之间保持双工连接，服务器的更新可以被及时推送给客户端，而不需要客户端以一定时间间隔去轮询</p>
+				</section>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
