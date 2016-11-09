@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+<body>
+
+  <h3>污染城市列表</h3>
+  <ul id="aqi-list">
+<!--
+    <li>第一名：福州（样例），10</li>
+  	<li>第二名：福州（样例），10</li> -->
+  </ul>
+
+<script type="text/javascript">
+
+var aqiData = [
+  ["北京", 90],
+  ["上海", 50],
+  ["福州", 10],
+  ["广州", 50],
+  ["成都", 90],
+  ["西安", 100]
+];
+
+(function () {
+
+  /*
+  在注释下方编写代码
+  遍历读取aqiData中各个城市的数据
+  将空气质量指数大于60的城市显示到aqi-list的列表中
+  */
+
+  /*先获取id：aqi-list*/
+  var aqiList = document.getElementById("aqi-list");
+
+  // aqiData排序
+  aqiData.sort(aqiSort);
+  // 遍历输出
+  aqi_output1();
+  aqi_output2();
+
+  //降序b-a
+  function aqiSort(a,b){
+    return b[1] - a[1];
+  }
+
+  function aqi_output1()
+  {
+
+    //数组rent 存放 排名
+    var rent =["一","二","三","四","五","六"];
+
+    aqiList.innerHTML = " ";
+
+    for (var i = 0; i < aqiData.length; i++) {
+      if (aqiData[i][1] > 60)
+      {
+          var aqiLi = document.createElement("li");
+          aqiLi.innerHTML =  "第" + rent[i] + "名：" + aqiData[i][0] + "," + aqiData[i][1] ;
+          aqiList.appendChild(aqiLi);
+      }
+    }
+  }
+
+  function aqi_output2()
+  {
+    var container = " ";
+    var rent2 =["一","二","三","四","五","六"];
+    aqiData.filter(function(element){return element[1] > 60})
+           .sort(function(a,b){return b[1]-a[1]})
+           .forEach(function(element,index)
+            {
+              container += "<li>第" + rent2[index] + "名：" + element[0] +","+ element[1]+"</li>";
+            });
+
+    aqiList.innerHTML += container;
+
+  }
+
+
+  /*
+  新技能Get√
+
+  ·排序函数sort()，正常是升序a-b，降序是b-a；
+
+  ·创建节点用document.createElement，再用innerHTML添加文本，appendChild指在aqiList最后加上aqiLi节点。
+
+  ·方法一：qi_output1()
+   循环内appendChild，重排会引起性能下降，对DOM的操作过于频繁。
+
+  ·方法二：aqi_output2()。
+   用了filter 新建一个数组 存储 满足条件的element，再用sort对filter进行降序，forEach代替for循环遍历处理函数，最后用使用了element.innerHTML属性一次性改变元素的DOM结构。
+
+   filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。
+   array.filter(function(currentValue,index,arr), thisValue){};
+
+   注意：
+   currentValue:当前元素的值,必须。
+   不会对空数组进行检查，不会对空数组进行检测。
+
+  ·forEach()
+  [].forEach(function(value, index, array) { // ... });
+  value:遍历的数组内容
+  index:对应的数组索引
+  array:数组本身,可选。
+
+
+  */
+
+})();
+
+</script>
+</body>
+</html>

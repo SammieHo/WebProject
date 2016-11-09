@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+<body>
+
+  <label>请输入北京今天空气质量：<input id="aqi-input" type="text"></label>
+  <button id="button">确认填写</button>
+
+  <div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+
+<script type="text/javascript">
+
+(function() {
+  /*
+  在注释下方写下代码
+  给按钮button绑定一个点击事件
+  在事件处理函数中
+  获取aqi-input输入的值，并显示在aqi-display中
+  */
+
+  var f = function(id)
+  {
+    return document.getElementById(id);
+  }
+
+  var handler = function()
+  {
+      var num = parseInt(f("aqi-input").value);
+      if ( (!isNaN(num)) && (num>=0) && (num<=1000) )
+      {
+        f("aqi-display").innerHTML = num;
+      }
+      else
+      {
+        alert(f("aqi-input").value + " isn't a effective number.");
+      }
+  }
+
+  // js绑定事件方法：
+  f("button").onclick = function()
+  {
+      handler();
+  }
+  //键盘按下 绑定 回车:
+  f("aqi-input").onkeyup = function(event)
+  {
+      if(event.keyCode == 13)
+      {
+        handler();
+        //f("button").onclick();
+      }
+  }
+
+  // 事件监听方法：
+  //f("button").addEventListener("click",handler,false);
+
+  // function addEvent(obj,type,handle)
+  // {
+  //   try
+  //   {
+  //     //标准
+  //     obj.addEventListener(type,handle,false);
+  //   }
+  //   catch(e)
+  //   {
+  //      //IE8-
+  //       obj.attachEvent('on'+ obj,handle);
+  //   }
+  // }
+
+  // addEvent(f("button"),"click",handler);
+
+  /*
+  新技能Get：
+
+  · isNaN() 函数
+    用于检查其参数是否是非数字值。
+    常用于检测 parseFloat() 和 parseInt() 的结果，以判断它们表示的是否是合法的数字。
+
+  · onclick 事件
+
+    在JS中绑定事件的语法：
+    elementObject.onclick = function(){}
+
+    事件监听
+    1.elementObject.addEventListener(eventName,handle,useCapture);
+    2.elementObject.attachEvent(eventName,handle);
+
+      elementObject DOM对象（元素）
+      eventName 事件名
+      handle 处理事件的函数
+      useCapture  捕获,Boolean类型，一般用false 。
+
+    ·注意：addEventListener 的 eventName 无 "on",如 click。
+           eventNane要加 双引号"type"
+
+    ·addEventListener()是标准的绑定事件监听函数的方法，是W3C所支持的，
+     Chrome、FireFox、Opera、Safari、IE9.0及其以上版本都支持该函数；
+     但是，IE8.0及其以下版本不支持该方法，它使用attachEvent()来绑定事件监听函数。所以，这种绑定事件的方法必须要处理浏览器兼容问题。
+
+    function addEvent(obj,type,handle)
+    {
+        try
+        { // Chrome、FireFox、Opera、Safari、IE9.0及其以上版本
+          obj.addEventListener(type,handle,false);
+        }
+        catch(e)
+        {
+            try
+            { // IE8.0及其以下版本
+              obj.attachEvent('on' + type,handle);
+            }
+            catch(e)
+            { // 早期浏览器
+              obj['on' + type] = handle;
+            }
+        }
+    }
+
+    支持该事件的HTML标签：
+    <a>, <address>, <area>, <b>, <bdo>, <big>, <blockquote>, <body>, <button>,
+    <caption>, <cite>, <code>, <dd>, <dfn>, <div>, <dl>, <dt>, <em>, <fieldset>,
+    <form>, <h1> to <h6>, <hr>, <i>, <img>, <input>, <kbd>, <label>, <legend>,
+    <li>, <map>, <object>, <ol>, <p>, <pre>, <samp>, <select>, <small>, <span>,
+    <strong>, <sub>, <sup>, <table>, <tbody>, <td>, <textarea>, <tfoot>, <th>,
+    <thead>, <tr>, <tt>, <ul>, <var>
+
+    支持该事件的 JavaScript 对象：
+    button, document, checkbox, link, radio, reset, submit
+
+  ·onKeyUp()
+   事件会在键盘按键被松开时发生
+  */
+
+})();
+
+</script>
+</body>
+</html>
