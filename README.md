@@ -15,3 +15,4 @@
 1. [Math.random()随机数的一些事一些情](https://github.com/SammieHo/WebProject/issues/2)
 2. [setTimeout()和setInterval()的单细胞感情](https://github.com/SammieHo/WebProject/issues/3)
 3. [重新认识-盒子模型](https://github.com/SammieHo/WebProject/issues/5)
+4. [事件监听—addEventListener](https://github.com/SammieHo/WebProject/issues/6)
