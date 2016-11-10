@@ -1,6 +1,6 @@
 ## 2_1.html 事件监听兼容
 
-**addEvent(obj,type,func)**
+###    addEvent(obj,type,func)
 
 - obj : elementObject 需监听的对象
 
