@@ -2,8 +2,8 @@
 
 **addEvent(obj,type,func)**
 
--obj : elementObject 需监听的对象
+- obj : elementObject 需监听的对象
 
--type : listener type 需监听事件类型，如"click","blur"。
+- type : listener type 需监听事件类型，如"click","blur"。
 
--func : function 事件触发执行的回调函数。
+- func : function 事件触发执行的回调函数。
