@@ -16,3 +16,4 @@
 2. [setTimeout()和setInterval()的单细胞感情](https://github.com/SammieHo/WebProject/issues/3)
 3. [重新认识-盒子模型](https://github.com/SammieHo/WebProject/issues/5)
 4. [事件监听—addEventListener](https://github.com/SammieHo/WebProject/issues/6)
+5. [快速排序](https://github.com/SammieHo/WebProject/issues/7)
