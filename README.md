@@ -19,3 +19,4 @@
 5. [快速排序](https://github.com/SammieHo/WebProject/issues/7)
 6. [插入排序](https://github.com/SammieHo/WebProject/issues/8)
 7. [递归的一点点理解](https://github.com/SammieHo/WebProject/issues/9)
+8. [从柯里化函数，加深对递归的运用](https://github.com/SammieHo/WebProject/issues/10)
