@@ -1,7 +1,5 @@
 # WebProject
-> My some projects .
-
-#### 一些项目，小闹腾
+> My some projects or demo.
 
 1. [Html5 TagsUse](https://sammieho.github.io/WebProject/1_H5_TagsUsed/)
 2. [Canvas绘制倒计时](https://sammieho.github.io/WebProject/2_Canvas_Countdown/)
@@ -20,3 +18,4 @@
 6. [插入排序](https://github.com/SammieHo/WebProject/issues/8)
 7. [递归的一点点理解](https://github.com/SammieHo/WebProject/issues/9)
 8. [从柯里化函数，加深对递归的运用](https://github.com/SammieHo/WebProject/issues/10)
+9. [Ajax笔记](https://segmentfault.com/n/1330000007565272)
