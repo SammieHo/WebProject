@@ -19,3 +19,4 @@
 7. [递归的一点点理解](https://github.com/SammieHo/WebProject/issues/9)
 8. [从柯里化函数，加深对递归的运用](https://github.com/SammieHo/WebProject/issues/10)
 9. [Ajax笔记](https://segmentfault.com/n/1330000007565272)
+10. [一道关于this和作用域的题目引发的思考](https://segmentfault.com/n/1330000008198743)
